@@ -1,0 +1,17 @@
+<div>
+    <app-third-exercice-header></app-third-exercice-header>
+</div>
+<button class="btn btn-primary m-3" (click)="retour()">back</button>
+<div class="card p-2">
+    <ul>
+        <li><strong>id : </strong>{{transaction.id}}</li>
+        <li><strong>amount : </strong>{{transaction.amount}}</li>
+        <li><strong>balance : </strong>{{transaction.balance}}</li>
+        <li><strong>label : </strong>{{transaction.label}}</li>
+        <li><strong>description : </strong>{{transaction.description}}</li>
+        <li><strong>date : </strong>{{transaction.date | date:'dd-MM-yyyy HH:mm'}}</li>
+    </ul>
+</div>
+
+
+

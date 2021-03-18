@@ -1,0 +1,10 @@
+.champSaisi{
+    width: 26%;
+    display: inline-block;
+    margin: 2%;
+}
+
+#histo li{
+    display: inline-block;
+    width: 30%;
+}

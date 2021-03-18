@@ -1,0 +1,29 @@
+<div class="form-group">
+    <input type="number" class="form-control champSaisi" [(ngModel)]="firstNumber">
+
+    <select [(ngModel)]="operateur" class="form-control champSaisi">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="/">/</option>
+        <option value="*">*</option>
+    </select>
+
+    <input type="number" class="form-control champSaisi" [(ngModel)]="secondNumber">
+
+    <button (click)="calculer()" class="btn btn-primary">Calculer</button>
+</div>
+<div class="jumbotron">
+    <h1 style="text-align: right;">{{total}}</h1>
+</div>
+<div class="p-3">
+    <h3>Historique</h3>
+
+    <ul *ngFor="let opr of historique" id="histo">
+        <li>{{opr.date | date:'dd-MM-yyyy HH:mm'}}</li>
+        <li>{{opr.resultat}}</li>
+        <li>
+            <button (click)="delete(opr.date)" class="btn btn-danger">x</button>
+        </li>
+    </ul>
+
+</div>

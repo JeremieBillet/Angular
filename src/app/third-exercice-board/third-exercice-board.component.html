@@ -1,0 +1,26 @@
+<div>
+    <app-third-exercice-header></app-third-exercice-header>
+</div>
+
+<h2>Ensemble des opérations</h2>
+
+<table datatable [dtTrigger]="dtTrigger" class="row-border hover">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>amount</th>
+            <th>balance</th>
+            <th>label</th>
+            <th>date</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let op of transactions" (click)="selectOp(op.id)">
+            <td>{{op.id}}</td>
+            <td>{{op.amount}}</td>
+            <td>{{op.balance}}</td>
+            <td>{{op.label}}</td>
+            <td>{{op.date | date:'dd-MM-yyyy HH:mm'}}</td>
+        </tr>
+    </tbody>
+</table>

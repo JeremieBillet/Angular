@@ -1,0 +1,37 @@
+<div class="form-group">
+    <label for="nom">Entrez votre nom :</label>
+    <input type="text" class="form-control" id="nom" [(ngModel)]="nom">
+</div>
+
+<div class="form-group">
+    <label for="police">Sélectionner une police :</label>
+    <select [(ngModel)]="police" class="form-control" id="police">
+        <option value="Arial">Arial</option>
+        <option value="Times">Times</option>
+        <option value="Georgia">Georgia</option>
+    </select>
+</div>
+
+<div class="form-group">
+    <label for="taille">Sélectionner une taille de police :</label>
+    <input type="number" class="form-control" id="taille" [(ngModel)]="taille" min="6">
+</div>
+
+<div class="form-check">
+    <p>Choisissez la position du texte :</p>
+
+    <input class="form-check-input" type="radio" id="gauche" [(ngModel)]="position" value="left">
+    <label class="form-check-label" for="gauche">Gauche</label><br />
+
+    <input class="form-check-input" type="radio" id="centre" [(ngModel)]="position" value="center">
+    <label class="form-check-label" for="centre">Centre</label><br />
+
+    <input class="form-check-input" type="radio" id="droite" [(ngModel)]="position" value="right">
+    <label class="form-check-label" for="droite">Droite</label>
+
+</div>
+<br />
+<br />
+<h2 [style.font-size.px]="taille" [style.text-align]="position" [style.font-family]="police">
+    Bonjour {{nom | uppercase}} !
+</h2>
